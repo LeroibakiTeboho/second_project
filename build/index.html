@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acme Rockets</title>
-    <link rel="stylesheet" href="/build/css/style.css">
 
+    <!-- || title -->
+    <title>Acme Rockets</title>
+
+    <!-- || style -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- || js -->
+    <script defer src="js/main.js"></script>
 
 </head>
+
+<!-- body -->
 <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
 
     <!-- || header -->
@@ -22,15 +30,55 @@
             </h1>
 
             <!-- || button -->
-            <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none cursor-pointer">&#9776;</button>
+            <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer relative w-8 h-8">
+                <!-- &#9776; -->
+                <div 
+                class="
+                bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 
+                transition-all duration-500
+                before:content-[''] 
+                before:bg-white 
+                before:w-8 before:h-1 
+                before:rounded before:absolute
+                before:-translate-x-4
+                before:-translate-y-3
+                before:transition-all before:duration-500
+
+                after:content-[''] 
+                after:bg-white 
+                after:w-8 after:h-1 
+                after:rounded after:absolute
+                after:-translate-x-4
+                after:translate-y-3
+                after:transition-all after:duration-500
+                 ">
+                </div>
+            </button>
 
             <!-- || nav -->
-            <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
+            <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
                 <a href="#rockets" class="hover:opacity-50 duration-300">Our Rockets</a>
                 <a href="#testimonials" class="hover:opacity-50 duration-300">Testimonaials</a>
                 <a href="#contact" class="hover:opacity-50 duration-300">Contact Us</a>
             </nav>
         </section>
+
+        <!-- || mobile menu -->
+        <section id="mobile-menu" class="absolute top-68 bg-black w-full text-5xl flex-col justify-center origin-top animate-open-menu hidden">
+            <!-- || hid menu button -->
+            <!-- <button class="text-8xl self-end px-6">&times;</button> -->
+
+            <!-- || show mobile menu -->
+            <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+                <a href="#hero" class="w-full text-center py-6 hover:opacity-50 duration- ease-in-out">Home</a>
+                <a href="#rockets" class="w-full text-center py-6 hover:opacity-50 duration- ease-in-out">Our Rockets</a>
+                <a href="#testimonials" class="w-full text-center py-6 hover:opacity-50 duration- ease-in-out">Testimomials</a>
+                <a href="#contact" class="w-full text-center py-6 hover:opacity-50 duration- ease-in-out">Contact Us</a>
+                <a href="#footer" class="w-full text-center py-6 hover:opacity-50 duration- ease-in-out">Legal</a>
+            </nav>
+
+        </section>
+
     </header>
 
     <!-- || main -->
